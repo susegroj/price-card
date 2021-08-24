@@ -1,0 +1,122 @@
+.price-card {
+  background: var(--white);
+  border-radius: 1rem;
+  color: rgb(var(--gray));
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  height: 100%;
+  max-width: 350px;
+  min-width: 300px;
+  padding: 2rem 2rem 3rem;
+  position: relative;
+  
+  &.best {
+    background: rgb(var(--orange));
+    box-shadow: 1px 42px 34px rgba(var(--shadow));
+    color: var(--black);
+
+    top: -42px;
+    z-index: 2;
+
+    .popular {
+      background: rgba(255, 255, 255, 0.5);
+      color: var(--black);
+    }
+
+    .price span {
+      color: var(--black);
+    }
+
+    .benefits-list .benefit .icon {
+      color: var(--white);
+    }
+
+    .select-btn {
+      background: var(--black);
+      color: var(--white);
+    }
+  }
+
+  .popular {
+    align-self: flex-end;
+    background: rgba(var(--orange), 0.2);
+    border-radius: 5rem;
+    color: rgba(var(--orange));
+    font-size: 0.6rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 1rem;
+    text-align: center;
+    top: 2rem;;
+  }
+
+  .price {
+    color: var(--black);
+
+    strong {
+      font-size: 2rem;
+    }
+
+    span {
+      color: rgb(var(--gray));
+    }
+  }
+
+  .title {
+    color: var(--black);
+    font-size: 2rem;
+  }
+ 
+  .benefits-list {
+    list-style-type: none;
+
+    .benefit {
+      align-items: center;
+      display: flex;
+      gap: 0.5rem;
+      opacity: 0.5;
+      padding: 0.5rem 0;
+
+      &.included {
+        opacity: 1;
+      }
+
+      .icon {
+        
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .select-btn {
+    background: rgba(var(--orange), 0.2);
+    border-radius: 5rem;
+    border-style: none;
+    color: rgba(var(--orange));
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .price-card {
+    min-width: 100%;
+    
+    &.best {
+      margin: 0 0 42px;
+      top: 0;
+    }
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .price-card {    
+    &.best {
+      margin: 0 0 42px;
+      top: 0;
+    }
+  }
+}

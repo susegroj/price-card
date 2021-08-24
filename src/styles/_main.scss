@@ -1,0 +1,108 @@
+@use './colors';
+@use './fonts';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root,
+.app {
+  color: var(--black);
+  font-family: Poppins, system-ui, sans-serif;
+  font-size: 16px;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.app {
+  background: var(--back);
+  display: flex;
+  flex-flow: column;
+  
+  gap: 1rem;
+  padding: 2rem;
+  
+  &-title {
+    padding: 0 0 0.5rem;
+  }
+
+  &-description {
+    color: rgb(var(--gray));
+  }
+  
+  &-cards-wrapper {
+    align-content: center;
+
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    overflow: auto;
+    padding: 42px 0;
+    
+    
+    
+    place-items: center;
+    width: 100%;
+    
+  }
+
+  &-prices {
+    
+    display: flex;
+    flex-flow: row nowrap;
+    
+    
+    
+    gap: 1rem 0.5rem;
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: 572px) {
+  .app {
+    height: auto;
+    padding: 2rem 1rem;
+
+    &-cards-wrapper {
+      background: var(--orange);
+      overflow: unset;
+      padding: 2rem 0 1rem;
+      width: 100%;
+      
+    }
+
+    &-prices {
+      background: none;
+      flex-wrap: wrap;
+      gap: 2rem;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .app {
+    font-size: 0.9rem;
+    height: auto;
+
+    &-cards-wrapper {
+      background: var(--orange);
+      overflow: unset;
+      padding: 2rem 0 1rem;
+      width: 100%;
+    }
+
+    &-prices {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
