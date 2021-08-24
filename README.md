@@ -36,6 +36,7 @@ yarn run test
 * Twitter: [@susegroj](https://twitter.com/susegroj)
 * Github: [@susegroj](https://github.com/susegroj)
 * LinkedIn: [@jorgemaciasmorales](https://linkedin.com/in/jorgemaciasmorales)
+* Website [@susegroj](https://github.com/susegroj/susegroj/blob/develop/README.md)
 
 ## Show your support
 
